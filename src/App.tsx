@@ -7,12 +7,12 @@ export const App = () => {
   return (
     <div>
 	{[range(20, 40).map(index => {
-		<p>wow{index}</p>
+		<p key={`${index}`}>wow{index}</p>
 	})]}
 	<li>
 	{Data.map(entry=>{
 			return (
-			<ul>- {entry.text}: {entry.date.toString()}</ul>
+			<ul key={entry.text}>- {entry.text}: {entry.date.toString()}</ul>
 			)
 		})}
 	</li>
