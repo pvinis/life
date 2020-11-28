@@ -38,5 +38,6 @@ module.exports = {
 		'array-bracket-spacing': [ERR],
 		'comma-spacing': [ERR],
 		'react/react-in-jsx-scope': [OFF],
+		'@typescript-eslint/explicit-module-boundary-types': [OFF],
 	},
 }
