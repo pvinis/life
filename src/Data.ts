@@ -40,7 +40,7 @@ export const Data: Entry[] = [
 	},
 	{
 		date: DateTime.local(1988, 2, 25).plus({ years: 18 }),
-		text: 'became 18',
+		text: 'turned 18',
 	},
 	{
 		interval: Interval.fromDateTimes(DateTime.local(2020, 11, 3), now),
