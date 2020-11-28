@@ -87,7 +87,7 @@ export const App = () => {
 					)
 				})}
 			</li>
-			<a href="https://github.com/pvinis/life">source code</a>
+			<a href='https://github.com/pvinis/life'>source code</a>
 		</div>
 	)
 }
