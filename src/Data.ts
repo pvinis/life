@@ -1,4 +1,5 @@
 import { DateTime, Interval } from 'luxon'
+import { range } from 'ramda'
 
 
 export type Entry = (
@@ -22,9 +23,25 @@ export const Data: Entry[] = [
 		date: DateTime.local(1988, 2, 25).setZone('Europe/Athens', { keepLocalTime: true }),
 		text: 'birth',
 	},
+	...range(1, 33).map(year => ({
+		date: DateTime.local(1988+year, 2, 25),
+		text: `${year} birthday`,
+	})),
 	{
 		date: now,
 		text: 'now',
+	},
+	{
+		interval: Interval.fromDateTimes(DateTime.local(2005, 9, 4), DateTime.local(2010, 7, 10)),
+		text: 'di uoa',
+	},
+	{
+		interval: Interval.fromDateTimes(DateTime.local(2010, 9, 4), DateTime.local(2015, 7, 10)),
+		text: 'di uoa master',
+	},
+	{
+		interval: Interval.fromDateTimes(DateTime.local(1988, 2, 25), DateTime.local(2014, 3, 3)),
+		text: 'live in Athens',
 	},
 	{
 		interval: Interval.fromDateTimes(DateTime.local(2014, 3, 3), DateTime.local(2016, 11, 3)),
