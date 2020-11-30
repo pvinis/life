@@ -71,6 +71,7 @@ export const App = () => {
 					return <TimeBox key={week.index} unit={week} />
 				})]}
 			</div>
+			<a href='https://github.com/pvinis/life'>source code</a>
 			<li>
 				{Data.map((entry) => {
 					let str = ''
@@ -87,7 +88,6 @@ export const App = () => {
 					)
 				})}
 			</li>
-			<a href='https://github.com/pvinis/life'>source code</a>
 		</div>
 	)
 }
