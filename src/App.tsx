@@ -32,7 +32,7 @@ const TimeBox = ({ unit }: {unit: TimeUnit}) => {
 }
 
 const findDob = (data: Entry[], duration: Duration) => {
-	const dobEntry = Data.find(x=> x.text === 'birth')
+	const dobEntry = Data.find(x => x.text === 'birth')
 	if (dobEntry !== undefined && 'date' in dobEntry) {
 		return dobEntry.date
 	}
@@ -76,7 +76,9 @@ export const App = () => {
 			</div>
 			<a href='https://github.com/pvinis/life'>source code</a>
 			<div>
-				<button type='button' onClick={()=>setShowDebug(!showDebug) }>{showDebug ? 'hide' : 'show'} debug data</button>
+				<button type='button' onClick={() => setShowDebug(!showDebug) }>
+					{showDebug ? 'hide' : 'show'} debug data
+				</button>
 				{showDebug ?  (
 					<li>
 						{Data.map((entry) => {
