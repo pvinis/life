@@ -41,6 +41,8 @@ module.exports = {
 		'arrow-spacing': [ERR],
 
 		'react/react-in-jsx-scope': [OFF],
+		'react/jsx-curly-spacing': [ERR, 'never'],
+
 		'@typescript-eslint/explicit-module-boundary-types': [OFF],
 	},
 }

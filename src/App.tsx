@@ -74,10 +74,10 @@ export const App = () => {
 					return <TimeBox key={week.index} unit={week} />
 				})]}
 			</div>
-			<a href='https://github.com/pvinis/life'>source code</a>
+			<a href='https://github.com/pvinis/life'>See source code</a>
 			<div>
-				<button type='button' onClick={() => setShowDebug(!showDebug) }>
-					{showDebug ? 'hide' : 'show'} debug data
+				<button type='button' onClick={() => setShowDebug(!showDebug)}>
+					{showDebug ? 'Hide' : 'Show'} debug data
 				</button>
 				{showDebug ?  (
 					<li>
