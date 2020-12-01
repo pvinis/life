@@ -3,6 +3,7 @@ import randomColor from 'randomcolor'
 import { range } from 'ramda'
 
 import { Data, Entry } from './Data'
+import { useState } from 'react'
 
 
 type TimeUnit = {
@@ -64,6 +65,8 @@ export const App = () => {
 		}
 	})
 
+	const [showDebug, setShowDebug] = useState(false)
+
 	return (
 		<div>
 			<div style={{ display: 'flex', flex: 1, flexDirection: 'row', flexWrap: 'wrap'  }}>
@@ -72,22 +75,27 @@ export const App = () => {
 				})]}
 			</div>
 			<a href='https://github.com/pvinis/life'>source code</a>
-			<li>
-				{Data.map((entry) => {
-					let str = ''
-					if ('date' in entry) {
-						str = entry.date.toString()
-					}
-					if ('interval' in entry){
-						str = entry.interval.toString()
-					}
-					return (
-						<ul key={entry.text}>
+			<div>
+				<button type='button' onClick={()=>setShowDebug(!showDebug) }>{showDebug ? 'hide':'show'} debug data</button>
+				{showDebug ?  (
+					<li>
+						{Data.map((entry) => {
+							let str = ''
+							if ('date' in entry) {
+								str = entry.date.toString()
+							}
+							if ('interval' in entry){
+								str = entry.interval.toString()
+							}
+							return (
+								<ul key={entry.text}>
 							- {entry.text}: {str}
-						</ul>
-					)
-				})}
-			</li>
+								</ul>
+							)
+						})}
+					</li>
+				) : null}
+			</div>
 		</div>
 	)
 }
