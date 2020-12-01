@@ -59,7 +59,7 @@ export const App = () => {
 		if ('interval' in entry){
 			const startWeekToBeAddedTo = Math.floor(entry.interval.start.diff(dob, 'weeks').weeks)
 			const endWeekToBeAddedTo = Math.floor(entry.interval.end.diff(dob, 'weeks').weeks)
-			range(startWeekToBeAddedTo, endWeekToBeAddedTo+1).forEach(weekIndex => {
+			range(startWeekToBeAddedTo, endWeekToBeAddedTo + 1).forEach(weekIndex => {
 				weeks[weekIndex].text.push(entry.text)
 			})
 		}
@@ -76,7 +76,7 @@ export const App = () => {
 			</div>
 			<a href='https://github.com/pvinis/life'>source code</a>
 			<div>
-				<button type='button' onClick={()=>setShowDebug(!showDebug) }>{showDebug ? 'hide':'show'} debug data</button>
+				<button type='button' onClick={()=>setShowDebug(!showDebug) }>{showDebug ? 'hide' : 'show'} debug data</button>
 				{showDebug ?  (
 					<li>
 						{Data.map((entry) => {

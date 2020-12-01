@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 const OFF = 'off'
-const WARN ='warn'
+const WARN = 'warn'
 const ERR = 'error'
 /* eslint-enable @typescript-eslint/no-unused-vars */
 
@@ -37,6 +37,7 @@ module.exports = {
 		'key-spacing': [ERR],
 		'array-bracket-spacing': [ERR],
 		'comma-spacing': [ERR],
+		'space-infix-ops': [ERR],
 		'react/react-in-jsx-scope': [OFF],
 		'@typescript-eslint/explicit-module-boundary-types': [OFF],
 	},
