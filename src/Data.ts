@@ -25,7 +25,7 @@ export const Data: Entry[] = [
 		tags: ['general'],
 	},
 	...range(1, 33).map(year => ({
-		date: DateTime.local(1988+year, 2, 25),
+		date: DateTime.local(1988 + year, 2, 25),
 		text: `${year} birthday`,
 		tags: ['general'],
 	})),
